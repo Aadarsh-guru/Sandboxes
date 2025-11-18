@@ -1,0 +1,10 @@
+services:
+  sandbox-mobile:
+    build: .
+    image: sandbox-mobile:latest
+    ports:
+      - "80:80"
+      - "8081:8081"
+    environment:
+      - SANDBOX_API_KEY=secret
+      - SANDBOX_TIMEOUT=600000

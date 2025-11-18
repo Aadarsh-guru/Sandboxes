@@ -1,0 +1,10 @@
+services:
+  sandbox-web:
+    build: .
+    image: sandbox-web:latest
+    ports:
+      - "80:80"
+      - "3000:3000"
+    environment:
+      - SANDBOX_API_KEY=secret
+      - SANDBOX_TIMEOUT=600000
